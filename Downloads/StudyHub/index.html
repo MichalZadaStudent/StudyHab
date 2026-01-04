@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=html/login.html">
+    <title>StudyHub - טוען...</title>
+</head>
+<body>
+    <script>
+        // ניתוב חכם: אם המשתמש כבר מחובר, אפשר לשלוח אותו ישר לדשבורד
+        const user = localStorage.getItem('loggedInUserEmail') || sessionStorage.getItem('loggedInUserEmail');
+        if (user) {
+            window.location.href = "html/index.html";
+        } else {
+            window.location.href = "html/login.html";
+        }
+    </script>
+</body>
+</html>
