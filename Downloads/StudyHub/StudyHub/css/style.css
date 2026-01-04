@@ -1,0 +1,225 @@
+/* כללי */
+.home-icon {
+  width: 30px; /* גודל התמונה */
+  height: 30px;
+  vertical-align: middle; /* מיקום אופקי */
+}
+
+header {
+  background-color: #ffffff;
+  padding: 1em 2em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+.back-link {
+  color: #c74d70;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  color: #ad395b;
+}
+  
+  .add-task h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 1em;
+  }
+  
+  .add-task form {
+    display: grid;
+    gap: 12px;
+  }
+  
+  .add-task label {
+    font-weight: bold;
+    color: #c74d70;
+  }
+  
+  .add-task input,
+  .add-task select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+  }
+  
+  .add-task input:focus,
+  .add-task select:focus {
+    border-color: #c74d70;
+    outline: none;
+    background-color: #fff;
+  }
+  
+  .add-task button {
+    background-color: #c74d70;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  
+.progress-section {direction: rtl;
+    margin-bottom: 2em;
+  }
+  .progress-bar-container {direction: rtl;
+    width: 100%;
+    background-color: #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 25px;
+  }
+  .progress-bar { direction: rtl;
+    background-color: #c74d70;
+    height: 100%;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    font-weight: bold;
+    border-radius: 10px 0 0 10px;
+    transition: width 0.5s ease;
+  }
+  
+body { direction: rtl;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    direction: rtl;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 0.5em;
+  }
+  
+  main {
+    padding: 2em;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  /* כפתורים */
+  button {
+    background-color: #c74d70;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #c74d70;
+  }
+  
+  /* טפסים */
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 6px 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  /* הודעות שגיאה */
+  .error {
+    color: #e74c3c;
+    font-size: 14px;
+  }
+  
+  /* ניווט */
+  header {
+    background-color: #ffffff;
+    padding: 1em 2em;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  header nav {
+    margin-top: 10px;
+  }
+  header nav a {
+    margin: 0 10px;
+    color: #c74d70;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* טבלאות */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  table th, table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+  }
+  table th {
+    background-color: #e8f0fe;
+  }
+  
+  /* רשימות */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  ul li {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 6px;
+  }
+  
+  /* יומן */
+  #calendar {
+    background-color: white;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    min-height: 400px;
+  }
+  
+  /* רספונסיביות */
+  @media (max-width: 600px) {
+    main {
+      padding: 1em;
+    }
+    button {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  

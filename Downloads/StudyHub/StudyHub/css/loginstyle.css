@@ -1,0 +1,117 @@
+/* סגנונות ייחודיים לדף ההתחברות */
+.login-container {
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    max-width: 400px;
+    margin: 4em auto;
+    text-align: center;
+    direction: rtl;
+}
+
+.login-container h1 {
+    color: #2c3e50;
+    margin-bottom: 1em;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* שימוש ב-gap במקום margin-bottom */
+}
+
+.login-container label {
+    font-weight: bold;
+    color: #c74d70;
+    text-align: right;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+    border-color: #c74d70;
+    outline: none;
+    background-color: #fff;
+}
+
+.login-container label[for="rememberMe"] {
+    text-align: right;
+    font-weight: normal;
+}
+
+.login-container button[type="submit"] {
+    background-color: #c74d70;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button[type="submit"]:hover {
+    background-color: #c74d70; /* שמירה על צבע ההובר המקורי */
+}
+
+.login-links {
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-links a {
+    color: #c74d70;
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.login-links a:hover {
+    text-decoration: underline;
+    color: #c74d70; /* שמירה על צבע ההובר המקורי */
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+/* רספונסיביות */
+@media (max-width: 600px) {
+    .login-container {
+        padding: 1.5em;
+        margin: 2em auto;
+    }
+
+    .login-container form {
+        gap: 10px;
+    }
+
+    .login-container button[type="submit"] {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .login-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5em;
+        margin-top: 1em;
+    }
+
+    .login-links a {
+        font-size: 1em;
+    }
+}

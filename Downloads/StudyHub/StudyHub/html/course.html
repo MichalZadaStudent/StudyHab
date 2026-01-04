@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>StudyHub - קורסים</title>
+    <link rel="stylesheet" href="../css/stylee.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+          <source src="../picture/video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay"></div>
+
+    <header data-aos="fade-down">
+        <h1 style="color: white;">ניהול קורסים</h1>
+        <a href="index.html" class="back-link" style="color: #ff7eb9; text-decoration: none; font-weight: bold;">חזרה לדשבורד</a>
+    </header>
+
+    <main data-aos="fade-up">
+        <form id="courseForm" data-aos="zoom-in">
+            <input type="text" id="courseName" placeholder="שם קורס חדש" required style="background: rgba(255,255,255,0.2); border: 1px solid white; color: white;">
+            <button type="submit" style="background: #ff758c; color: white; border: none; cursor: pointer;">הוסף קורס</button>
+        </form>
+        <ul id="courseList" data-aos="fade-up" style="list-style: none; padding: 0;"></ul>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    </script>
+    <script src="../js/scriptcourse.js"></script>    
+</body>
+</html>

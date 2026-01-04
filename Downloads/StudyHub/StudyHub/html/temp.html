@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+  <meta charset="UTF-8">
+  <title>StudyHub - יומן</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/calenderstyle.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- ספריות של גוגל -->
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="https://apis.google.com/js/api.js" async defer></script>
+
+  <!-- הסקריפט שלך -->
+  <script src="../js/scriptcalender.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>יומן משימות</h1>
+    <a href="index.html" class="back-link">חזרה לדשבורד</a>
+  </header>
+
+  <div id='calendar'></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const calendarEl = document.getElementById('calendar');
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        selectable: true,
+        editable: true,
+        events: [], // כאן נכניס את האירועים מה-API של גוגל
+        dateClick: function (info) {
+          const title = prompt('כותרת לאירוע:');
+          if (title) {
+            calendar.addEvent({
+              title: title,
+              start: info.date,
+              allDay: true
+            });
+          }
+        },
+        eventClick: function (info) {
+          if (confirm('למחוק את האירוע הזה?')) {
+            info.event.remove();
+          }
+        }
+      });
+      calendar.render();
+    });
+  </script>
+</body>
+
+
+</html>

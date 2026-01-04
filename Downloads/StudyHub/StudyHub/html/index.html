@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub - דשבורד</title>
+    <link rel="stylesheet" href="../css/stylee.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="video-background">
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="../picture/video.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+</div>
+    <div class="video-background"><video autoplay muted loop playsinline id="bg-video"><source src="https://assets.mixkit.co/videos/preview/mixkit-stars-in-the-night-sky-out-of-focus-9708-large.mp4" type="video/mp4"></video></div>
+    <div class="overlay"></div>
+    <header data-aos="fade-down">
+        <h1>שלום <span id="userDisplayName"></span> </h1>
+        <nav><a href="task.html">משימות</a><a href="course.html">קורסים</a><a href="calender.html">יומן</a></nav>
+    </header>
+    <main class="dashboard">
+        <section data-aos="fade-left"><h2>משימות קרובות</h2><ul id="upcomingTasks"></ul></section>
+        
+        <section data-aos="fade-right"><h2>התקדמות חודשית</h2><div class="progress-bar-container"><div class="progress-bar" style="width: 0%;">0%</div></div></section>
+        <section data-aos="fade-up"><h2>קורסים פעילים</h2><ul id="activeCourses"></ul></section>
+    </main>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // הפעלה של האנימציות
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+    <script src="../js/scriptindex.js"></script>
+</body>
+</html>

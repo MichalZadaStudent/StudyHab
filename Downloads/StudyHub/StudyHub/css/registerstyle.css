@@ -1,0 +1,107 @@
+/* סגנונות ייחודיים לדף ההרשמה */
+.register-container {
+    background-color: #ffffff;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    max-width: 400px;
+    margin: 4em auto;
+    text-align: center;
+    direction: rtl;
+}
+
+.register-container h1 {
+    color: #2c3e50;
+    margin-bottom: 1em;
+}
+
+.register-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* שימוש ב-gap במקום margin-bottom */
+}
+
+.register-container label {
+    font-weight: bold;
+    color: #c74d70;
+    text-align: right;
+}
+
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="password"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.register-container input[type="text"]:focus,
+.register-container input[type="email"]:focus,
+.register-container input[type="password"]:focus {
+    border-color: #c74d70;
+    outline: none;
+    background-color: #fff;
+}
+
+.register-container button[type="submit"] {
+    background-color: #c74d70;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.register-container button[type="submit"]:hover {
+    background-color: #c74d70; /* שמירה על צבע ההובר המקורי */
+}
+
+.register-container .login-link {
+    margin-top: 1.5em;
+    font-size: 0.9em;
+}
+
+.register-container .login-link a {
+    color: #c74d70;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.register-container .login-link a:hover {
+    text-decoration: underline;
+    color: #c74d70; /* שמירה על צבע ההובר המקורי */
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+/* רספונסיביות */
+@media (max-width: 600px) {
+    .register-container {
+        padding: 1.5em;
+        margin: 2em auto;
+    }
+
+    .register-container form {
+        gap: 10px;
+    }
+
+    .register-container button[type="submit"] {
+        padding: 10px;
+        font-size: 1em;
+    }
+
+    .register-container .login-link {
+        margin-top: 1em;
+        font-size: 1em;
+    }
+}

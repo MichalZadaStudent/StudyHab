@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>StudyHub - יומן חכם</title>
+    <link rel="stylesheet" href="../css/stylee.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/fullcalendar@6.1.15/index.global.min.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+         <source src="../picture/video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay"></div>
+
+    <header data-aos="fade-down">
+        <h1>היומן שלי</h1>
+        <a href="index.html" class="back-link">חזרה לדשבורד</a>
+    </header>
+
+    <main data-aos="zoom-in">
+        <div id="login">
+            <h2 style="text-align:center; color: white;">סנכרון עם Google Calendar</h2>
+            <button id="loginBtn" style="display:block; margin: 0 auto;">התחברות מאובטחת</button>
+        </div>
+        <div id='calendar' style="margin-top:20px;"></div>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="../js/calender.js"></script>
+</body>
+</html>

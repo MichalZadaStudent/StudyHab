@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>StudyHub - התחברות</title>
+    <link rel="stylesheet" href="../css/stylee.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+          <source src="../picture/video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay"></div>
+
+    <main class="login-container" data-aos="zoom-in">
+        <h1>התחברות ל-StudyHub</h1>
+        <form id="loginForm">
+            <label for="email">אימייל:</label>
+            <input type="text" id="email" required>
+<label for="password">סיסמה:</label>
+<div class="password-wrapper">
+    <input type="password" id="password" required>
+    <span id="togglePassword" class="eye">👁</span>
+</div>
+
+
+            <label><input type="checkbox" id="rememberMe"> זכור אותי</label>
+
+            <button type="submit">התחבר</button>
+            <p id="errorMsg" class="error"></p>
+        </form>
+        <div class="login-links">
+          
+            <a href="register.html">הרשמה</a>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+    <script src="../js/loginscript.js"></script>
+</body>
+</html>

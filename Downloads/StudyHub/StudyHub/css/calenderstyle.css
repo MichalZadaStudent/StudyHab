@@ -1,0 +1,97 @@
+/* סגנונות עבור דף היומן */
+
+/* כללי */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 1em 2em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+.back-link {
+  color: #c74d70;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  color: #ad395b;
+}
+
+main {
+  padding: 2em;
+  max-width: 900px;
+  margin: 2em auto;
+}
+
+/* כפתורי מעבר חודש */
+.calendar-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.calendar-controls button {
+  background-color: #c74d70;
+  color: white;
+  border: none;
+  padding: 0.7em 1.5em;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.calendar-controls button:hover {
+  background-color: #ad395b;
+}
+
+/* תצוגת היומן */
+#calendar {
+  background-color: white;
+  padding: 1.5em;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  min-height: 400px;
+  direction: rtl; /* יישור לימין עבור טקסט בעברית */
+}
+
+/* סגנונות נוספים (אם קיימים בקובץ calenderstyle.css) */
+/* תוכל להוסיף כאן סגנונות נוספים אם ישנם בקובץ calenderstyle.css */
+
+/* רספונסיביות */
+@media (max-width: 768px) {
+  main {
+    padding: 1.5em;
+  }
+
+  .calendar-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .calendar-controls button {
+    margin-bottom: 0.5em;
+  }
+}

@@ -1,0 +1,150 @@
+/* סגנונות עבור דף ניהול קורסים */
+
+/* כללי */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 1em 2em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  color: #2c3e50;
+  margin: 0;
+}
+
+.back-link {
+  color: #c74d70;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+  color: #ad395b;
+}
+
+main {
+  padding: 2em;
+  max-width: 600px;
+  margin: 2em auto;
+}
+
+/* טופס הוספת קורס */
+#courseForm {
+  background-color: #ffffff;
+  padding: 2em;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  display: flex;
+  gap: 1em;
+}
+
+#courseForm input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  flex-grow: 1;
+  background-color: #f9f9f9;
+}
+
+#courseForm input[type="text"]:focus {
+  border-color: #c74d70;
+  outline: none;
+  background-color: #fff;
+}
+
+#courseForm button[type="submit"] {
+  background-color: #c74d70;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#courseForm button[type="submit"]:hover {
+  background-color: #ad395b;
+}
+
+/* רשימת הקורסים */
+#courseList {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5em;
+}
+
+#courseList li {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  margin-bottom: 0.75em;
+  padding: 1em;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#courseList li span {
+  flex-grow: 1;
+}
+
+#courseList li button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+  margin-left: 0.5em;
+}
+
+#courseList li button:hover {
+  background-color: #c0392b;
+}
+
+/* רספונסיביות */
+@media (max-width: 600px) {
+  main {
+    padding: 1.5em;
+  }
+
+  #courseForm {
+    flex-direction: column;
+    gap: 0.75em;
+  }
+
+  #courseForm button[type="submit"] {
+    width: 100%;
+  }
+
+  #courseList li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+
+  #courseList li button {
+    margin-left: 0;
+    width: 100%;
+  }
+}

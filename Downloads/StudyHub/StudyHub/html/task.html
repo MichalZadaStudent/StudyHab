@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyHub - משימות</title>
+    <link rel="stylesheet" href="../css/stylee.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="../picture/video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="overlay"></div>
+
+    <header data-aos="fade-down">
+        <h1>ניהול משימות</h1>
+        <a href="index.html" class="back-link">חזרה לדשבורד</a>
+    </header>
+
+    <main data-aos="fade-up">
+        <section class="add-task-glass" data-aos="zoom-in">
+            <h2>➕ הוסף משימה חדשה</h2>
+            <form id="addTaskForm">
+                <div class="input-group">
+                    <input id="taskName" placeholder="שם משימה" required>
+                    <input id="taskCourse" placeholder="קורס משויך" required>
+                </div>
+                <div class="input-group">
+                    <select id="taskType">
+                        <option value="ממ״ן">ממ״ן</option>
+                        <option value="מבחן">מבחן</option>
+                        <option value="קריאה">קריאה</option>
+                        <option value="שיעור">שיעור</option>
+                    </select>
+                    <select id="taskStatus">
+                        <option value="פתוח">פתוח</option>
+                        <option value="בתהליך">בתהליך</option>
+                        <option value="הושלם">הושלם</option>
+                    </select>
+                    <input type="date" id="taskDate" required>
+                </div>
+                <button type="submit">💾 שמור משימה</button>
+            </form>
+        </section>
+
+        <div id="tasksContainer" class="tasks-grid"></div>
+    </main>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/scriptesk.js"></script>
+</body>
+</html>
