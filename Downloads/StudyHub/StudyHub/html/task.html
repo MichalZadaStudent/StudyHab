@@ -6,7 +6,7 @@
     <title>StudyHub - משימות</title>
     <link rel="stylesheet" href="../css/stylee.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
     <div class="video-background">
@@ -43,7 +43,10 @@
                     </select>
                     <input type="date" id="taskDate" required>
                 </div>
-                <button type="submit">💾 שמור משימה</button>
+                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                    <button type="submit" style="flex: 2;">💾 שמור במערכת</button>
+                    <button type="button" id="googleSyncBtn" style="flex: 1; background: #4285F4; color: white;">🗓️ שמור גם בגוגל</button>
+                </div>
             </form>
         </section>
 
