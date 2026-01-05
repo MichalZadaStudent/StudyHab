@@ -444,4 +444,90 @@ select option {
     font-size: 18px;
     z-index: 2;
     color: black; /* צבע ברור לעין */
+}/* =========================================
+   תיקון עיצוב לנייד - ורוד בהיר וזכוכית
+========================================= */
+@media (max-width: 768px) {
+    /* תיבות התוכן - מעבר לורוד בהיר שקוף במקום שחור או לבן אטום */
+    main, section, .task-card, .add-task-glass, .login-container {
+        background: rgba(255, 182, 193, 0.25) !important; /* ורוד בהיר שקוף */
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.4) !important;
+        padding: 20px 15px !important;
+        width: 94% !important;
+        margin: 15px auto !important;
+    }
+@media (max-width: 768px) {
+    /* 1. הפיכת הרקע של תיבות הטקסט ללבן נקי כדי שהכתב יבלוט */
+    input, select, textarea {
+        background-color: #ffffff !important; /* לבן אטום בפנים */
+        color: #000000 !important; /* טקסט שחור בולט */
+        border: 2px solid #ff758c !important; /* מסגרת ורודה חזקה */
+        opacity: 1 !important;
+        height: 50px !important;
+    }
+
+    /* 2. הדגשת הטקסט הרמז (Placeholder) שיהיה אפשר לקרוא מה צריך להזין */
+    input::placeholder {
+        color: #555555 !important; /* אפור כהה מאוד */
+        font-weight: bold !important;
+        opacity: 1 !important;
+    }
+
+    /* 3. הגדלת התוויות שמעל השדות */
+    label {
+        color: #ffffff !important;
+        font-size: 1.1rem !important;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5) !important;
+        display: block !important;
+        margin-bottom: 5px !important;
+    }
+}
+    /* תיקון השדות שבורחים הצידה (שם משימה וקורס) */
+    .input-group {
+        display: flex !important;
+        flex-direction: column !important; /* שדה מתחת לשדה כדי שלא יברחו הצידה */
+        gap: 12px !important;
+    }
+
+    /* תיקון שדה התאריך (ביטול הריבוע השחור) */
+    input[type="date"] {
+        background: rgba(255, 255, 255, 0.9) !important; /* רקע לבן נקי */
+        color: #333 !important; /* טקסט כהה שיהיה אפשר לקרוא */
+        appearance: none;
+        -webkit-appearance: none;
+        min-height: 45px;
+    }
+
+    /* עיצוב שדות הטקסט והסלקט */
+    input, select {
+        width: 100% !important;
+        background: white !important;
+        color: #ff758c !important; /* טקסט ורוד כהה */
+        border: 1px solid #ffb6c1 !important;
+    }
+
+    /* סידור הכפתורים בתחתית שיהיו אחד ליד השני אבל בתוך המסך */
+    #addTaskForm div[style*="display: flex"] {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        gap: 10px !important;
+        justify-content: space-between !important;
+    }
+
+    button {
+        flex: 1 !important;
+        min-width: unset !important;
+        padding: 12px 5px !important;
+        font-size: 0.8rem !important;
+        white-space: nowrap; /* מונע מהטקסט בכפתור להישבר */
+    }
+
+    /* התאמת הכותרות */
+    h1, h2, h3 {
+        color: white !important;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+        text-align: center;
+    }
 }
